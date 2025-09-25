@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/img/background.png);
+}
+
+.img-competidor {
+    width: 100%;
+}
+
+.conteudo-coluna {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25em;
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10em;
+}
+
+
+.divisao-icone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.icone {
+    background-color: yellow;
+    border-radius: 100%;
+    overflow: hidden;
+    text-align: center;
+    width: 550px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    box-shadow: 0 0 50px #ffffffc2;
+}
+
+.conteudo-sessao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
