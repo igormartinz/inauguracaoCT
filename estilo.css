@@ -1,8 +1,14 @@
+/* ------------------------------ */
+/* RESET BÁSICO                   */
+/* ------------------------------ */
 * {
     margin: 0;
     padding: 0;
 }
 
+/* ------------------------------ */
+/* LAYOUT PRINCIPAL               */
+/* ------------------------------ */
 body {
     margin: 0;
     height: 100vh;
@@ -12,8 +18,12 @@ body {
     background-image: url(/img/background.png);
 }
 
-.img-competidor {
-    width: 100%;
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10em;
 }
 
 .conteudo-coluna {
@@ -23,20 +33,19 @@ body {
     gap: 25em;
 }
 
-.conteudo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10em;
-}
-
-
+.conteudo-sessao,
 .divisao-icone {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1em;
+}
+
+/* ------------------------------ */
+/* ÍCONES / CARDS                 */
+/* ------------------------------ */
+.img-competidor {
+    width: 100%;
 }
 
 .icone {
@@ -46,16 +55,84 @@ body {
     text-align: center;
     width: 550px;
     height: 550px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 3em;
+
     box-shadow: 0 0 50px #ffffffc2;
+    border: 2px solid black;
 }
 
-.conteudo-sessao {
-    display: flex;
+/* ------------------------------ */
+/* MODAL                          */
+/* ------------------------------ */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.05);
+
     justify-content: center;
     align-items: center;
+}
+
+.modal-conteudo {
+    display: flex;
+    width: 90vw;
+    height: 75vh;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 80px;
+    color: #000000;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagem principal do modal */
+.modal-conteudo > img {
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+
+/* Coluna da direita */
+.conteudo-direita {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* Cada bloco (imagem + texto) */
+.item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item img {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.item p {
+    font-size: 3rem;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.item.invertido {
+    flex-direction: row-reverse;
 }

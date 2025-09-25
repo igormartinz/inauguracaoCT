@@ -5,55 +5,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
+    <script src="/app.js" defer></script>
     <title>Competições Senac</title>
 </head>
 
 <body>
     <header>
     </header>
-
     <main class="conteudo">
         <section class="conteudo-coluna">
             <article class="icone">
-                <img src="/img/cardDebora.png" class="img-competidor" alt="">
+                <img 
+                    src="/img/cardDebora.png" 
+                    class="img-competidor" 
+                    alt="" 
+                    data-ocupacao="aplicacoesWeb" 
+                    data-texto1="Texto da primeira imagem" 
+                    data-texto2="Texto da segunda imagem" 
+                    data-texto3="Texto da terceira imagem">
             </article>
             <article class="icone">
-                <img src="/img/cardDebora.png" class="img-competidor" alt="">
+                <img 
+                    src="/img/cardDebora.png" 
+                    class="img-competidor" 
+                    alt="" 
+                    data-ocupacao="cabeleireiro" 
+                    data-texto1="Texto da primeira imagem" 
+                    data-texto2="Texto da segunda imagem" 
+                    data-texto3="Texto da terceira imagem">
             </article>
             <article class="icone">
-                <img src="/img/cardDebora.png" class="img-competidor" alt="">
+                <img 
+                    src="/img/cardDebora.png" 
+                    class="img-competidor" 
+                    alt="" 
+                    data-ocupacao="cabeleireiro" 
+                    data-texto1="Texto da primeira imagem" 
+                    data-texto2="Texto da segunda imagem" 
+                    data-texto3="Texto da terceira imagem">
             </article>
         </section>
         <section class="conteudo-coluna">
             <article class="icone">
-                <img src="/img/cardDebora.png" class="img-competidor" alt="">
+                <img 
+                    src="/img/cardDebora.png" 
+                    class="img-competidor" 
+                    alt="" 
+                    data-ocupacao="cabeleireiro" 
+                    data-texto1="Texto da primeira imagem" 
+                    data-texto2="Texto da segunda imagem" 
+                    data-texto3="Texto da terceira imagem">
             </article>
             <article class="icone">
-                <img src="/img/cardDebora.png" class="img-competidor" alt="">
+                <img 
+                    src="/img/cardDebora.png" 
+                    class="img-competidor" 
+                    alt="" 
+                    data-ocupacao="cabeleireiro" 
+                    data-texto1="Texto da primeira imagem" 
+                    data-texto2="Texto da segunda imagem" 
+                    data-texto3="Texto da terceira imagem">
             </article>
             <article class="icone">
-                <img src="/img/cardDebora.png" class="img-competidor" alt="">
+                <img 
+                    src="/img/cardDebora.png" 
+                    class="img-competidor" 
+                    alt="" 
+                    data-ocupacao="cabeleireiro" 
+                    data-texto1="Texto da primeira imagem" 
+                    data-texto2="Texto da segunda imagem" 
+                    data-texto3="Texto da terceira imagem">
             </article>
             <article class="icone">
-                <img src="/img/cardDebora.png" class="img-competidor" alt="">
+                <img 
+                    src="/img/cardDebora.png" 
+                    class="img-competidor" 
+                    alt="" 
+                    data-ocupacao="cabeleireiro" 
+                    data-texto1="Texto da primeira imagem" 
+                    data-texto2="Texto da segunda imagem" 
+                    data-texto3="Texto da terceira imagem">
             </article>
         </section>
         <section class="conteudo-coluna">
             <article class="icone">
-                <img src="/img/cardDebora.png" class="img-competidor" alt="">
+                <img 
+                    src="/img/cardDebora.png" 
+                    class="img-competidor" 
+                    alt="" 
+                    data-ocupacao="cabeleireiro" 
+                    data-texto1="Texto da primeira imagem" 
+                    data-texto2="Texto da segunda imagem" 
+                    data-texto3="Texto da terceira imagem">
             </article>
             <article class="icone">
-                <img src="/img/cardDebora.png" class="img-competidor" alt="">
+                <img 
+                    src="/img/cardDebora.png" 
+                    class="img-competidor" 
+                    alt="" 
+                    data-ocupacao="cabeleireiro" 
+                    data-texto1="Texto da primeira imagem" 
+                    data-texto2="Texto da segunda imagem" 
+                    data-texto3="Texto da terceira imagem">
             </article>
             <article class="icone">
-                <img src="/img/cardDebora.png" class="img-competidor" alt="">
+                <img 
+                    src="/img/cardDebora.png" 
+                    class="img-competidor" 
+                    alt="" 
+                    data-ocupacao="cabeleireiro" 
+                    data-texto1="Texto da primeira imagem" 
+                    data-texto2="Texto da segunda imagem" 
+                    data-texto3="Texto da terceira imagem">
             </article>
         </section>
     </main>
+    <div id="modal" class="modal">
+        <div class="modal-conteudo">
+            <!-- Imagem principal do card -->
+            <img id="modalImg" src="" alt="">
 
-    <footer>
+            <!-- Coluna com itens alternados -->
+            <div class="conteudo-direita">
+                <div class="item alternado">
+                <img src="/img/exemplo1.png" alt="">
+                <p>Texto referente à primeira imagem</p>
+                </div>
 
-    </footer>
+                <div class="item alternado invertido">
+                <p>Texto referente à segunda imagem</p>
+                <img src="/img/exemplo2.webp" alt="">
+                </div>
+
+                <div class="item alternado">
+                <img src="/img/exemplo3.webp" alt="">
+                <p>Texto referente à terceira imagem</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>
