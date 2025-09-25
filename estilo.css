@@ -16,6 +16,8 @@ body {
     justify-content: center;
     align-items: center;
     background-image: url(/img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .conteudo {
@@ -90,18 +92,17 @@ body {
     display: flex;
     width: 90vw;
     height: 75vh;
-    gap: 1rem;
     background: rgba(255, 255, 255, 0.85);
     border-radius: 80px;
     color: #000000;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 /* Imagem principal do modal */
 .modal-conteudo > img {
-    width: 25vw;
-    height: 25vw;
+    width: 30vw;
+    height: 30vw;
     border-radius: 50%;
     box-shadow: 0 0 25px rgba(0,0,0,0.3);
 }
@@ -111,19 +112,22 @@ body {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    width: 50vw;
 }
 
 /* Cada bloco (imagem + texto) */
 .item {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 3em;
+    text-align: end;
+    flex-direction: row-reverse;
 }
 
 .item img {
     width: 10vw;
     height: 10vw;
-    border-radius: 50%;
+    border-radius: 50px;
     object-fit: cover;
 }
 
@@ -134,5 +138,8 @@ body {
 }
 
 .item.invertido {
+    display: flex;
     flex-direction: row-reverse;
+    text-align: start;
+    gap: 3em;
 }
