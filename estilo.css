@@ -48,6 +48,12 @@ body {
 /* ------------------------------ */
 .img-competidor {
     width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.img-competidor:hover {
+    transform: scale(1.05);
 }
 
 .icone {
@@ -72,7 +78,9 @@ body {
 /* MODAL                          */
 /* ------------------------------ */
 .modal {
-    display: none;
+    display: flex; /* mantém centralização */
+    opacity: 0;
+    visibility: hidden;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -86,8 +94,16 @@ body {
 
     justify-content: center;
     align-items: center;
+
+    transition: opacity 0.6s ease, visibility 0.6s ease; /* fade suave */
 }
 
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Conteúdo do modal */
 .modal-conteudo {
     display: flex;
     width: 90vw;
@@ -99,12 +115,19 @@ body {
     justify-content: space-around;
 }
 
+.modal.show .modal-conteudo.reveal {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Imagem principal do modal */
 .modal-conteudo > img {
     width: 30vw;
     height: 30vw;
     border-radius: 50%;
     box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    opacity: 1 !important; /* nunca some */
+    transition: none !important; /* sem fade */
 }
 
 /* Coluna da direita */
@@ -113,6 +136,14 @@ body {
     flex-direction: column;
     gap: 4rem;
     width: 50vw;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.modal.show .conteudo-direita {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Cada bloco (imagem + texto) */
@@ -142,4 +173,16 @@ body {
     flex-direction: row-reverse;
     text-align: start;
     gap: 3em;
+}
+
+/* ------------------------------ */
+/* CLONE DA IMAGEM ANIMADA        */
+/* ------------------------------ */
+.clone-img {
+    position: fixed;
+    z-index: 2000;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.6s ease-in-out;
+    pointer-events: none;
 }
